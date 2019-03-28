@@ -27,6 +27,7 @@ Single To do
         </div>
 
         <a class="btn btn-info btn-sm my-2 float-right" href="/todos/{{ $todo->id }}/edit">Edit</a>
+        <a class="btn btn-danger btn-sm my-2 mx-2 float-right" href="/todos/{{ $todo->id }}/delete">Delete</a>
 
       </div>
     </div>
