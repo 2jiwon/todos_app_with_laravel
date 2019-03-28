@@ -23,7 +23,10 @@ Single To do
           <div class="card-body">
             {{ $todo->description }}
           </div>
+
         </div>
+
+        <a class="btn btn-info btn-sm my-2 float-right" href="/todos/{{ $todo->id }}/edit">Edit</a>
 
       </div>
     </div>
