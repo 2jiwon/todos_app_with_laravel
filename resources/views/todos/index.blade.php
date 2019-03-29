@@ -30,7 +30,11 @@ Todos List
     
 		            @if($todo->completed == false)
 
-		              <a class="btn btn-info btn-sm mx-2 float-right" href="/todos/{{ $todo->id }}/complete">Complete</a>
+		              <a class="btn btn-warning btn-sm mx-2 float-right" href="/todos/{{ $todo->id }}/complete">Complete</a>
+
+                    @else
+                      
+		              <a class="btn btn-light btn-sm mx-2 float-right" href="/todos/{{ $todo->id }}/incomplete">Incomplete</a>
 
 		            @endif		
 	

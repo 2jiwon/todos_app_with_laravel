@@ -29,6 +29,16 @@ class TodosController extends Controller
       return redirect('/todos');
     }
 
+    public function incomplete(Todo $todo)
+    {
+      $todo->completed = false;
+      $todo->save();
+
+      session()->flash('success', 'Todo incompleted');
+
+      return redirect('/todos');
+    }
+
 
     public function show(Todo $todo)
     {
