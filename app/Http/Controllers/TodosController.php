@@ -19,6 +19,17 @@ class TodosController extends Controller
         return view('todos.index')->with('todos', $todos);
     }
 
+    public function complete(Todo $todo)
+    { 
+      $todo->completed = true;
+      $todo->save();
+
+      session()->flash('success', 'Todo completed');
+
+      return redirect('/todos');
+    }
+
+
     public function show(Todo $todo)
     {
         return view('todos.show')->with('todo', $todo);
