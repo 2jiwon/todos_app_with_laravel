@@ -28,7 +28,16 @@ Todos List
 
                     {{ $todo->name }} 
     
-                    <!-- <button class="btn btn-primary btn-sm float-right">View</button> -->
+		            @if($todo->completed == false)
+
+		              <a class="btn btn-warning btn-sm mx-2 float-right" href="/todos/{{ $todo->id }}/complete">Complete</a>
+
+                    @else
+                      
+		              <a class="btn btn-light btn-sm mx-2 float-right" href="/todos/{{ $todo->id }}/incomplete">Incomplete</a>
+
+		            @endif		
+	
                     <a class="btn btn-primary btn-sm float-right" href="/todos/{{ $todo->id }}">View</a>
 
                   </li> 
